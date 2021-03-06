@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <p>On clicking below button an alert message is called.</p>
+    <!-- onclick event -->
+    <button onclick="click()">Click Me!!!</button>
+
+    <!-- on double click event -->
+    <span ondblclick="doubleClick()">Double Click Me!!!</span>
+    <p id="myP">On clicking below button an alert message is called.</p>
+
+    <!-- on mouse over and on mouse out event  -->
+    <div onmouseover="mouseOver()" onmouseout="mouseOut()">
+        <h2 id="demo"> This is inside the division </h2>
+        <p>Keeping mouse on this text .Color of text changes.</p>
+    </div>
+
+    <!-- focus events -->
+    Enter your name: <input type="text" onfocus="focusInput(this)" onfocusout="focusOut(this)">
+
+    <br>
+    <br>
+
+    <!-- on input event -->
+    Enter your name: <input type="text" oninput="writeText()" id="myInput">
+    <p id="input_name"></p>
+
+    <!-- on toggle -->
+    <details ontoggle="onToggle()">
+        <summary>Programming Languages</summary>
+        <ul>
+            <li>JavaScript</li>
+            <li>Python</li>
+            <li>C++</li>
+            <li>Java</li>
+            <li>C</li>
+        </ul>
+    </details>
+
+    <!-- target -->
+    <p onclick="eventTarget(event)">Click here to know tagname</p>
+
+    <script src="Basics.js"></script>
+</body>
+
+</html>
