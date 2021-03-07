@@ -1,2 +1,2 @@
 # JavaScript
-Revision of JavaScript topics.
+Revision of JavaScript concepts.
