@@ -3,14 +3,15 @@
 class Student {
     // constructor
     constructor(Name, age, intrests) {
-        this.sthisame = Name;
+        // this keyword refers to the object it belongs to.
+        this.sname = Name;
         this.age = age;
         this.intrests = intrests;
 
     }
 
     bio() {
-        return `Hi, my name is ${this.name}.\nI am ${this.age} years old.\nI am intrested in ${this.intrests}.\n`;
+        return `Hi, my name is ${this.sname}.\nI am ${this.age} years old.\nI am intrested in ${this.intrests}.\n`;
     }
 }
 
