@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p id="demo">Input : </p>
+    <p id="demo1">Output : </p>
+
+    <p>Modifiers</p>
+    <button onclick="myFunction()">Global Search</button>
+    <button onclick="myFunction1()">Case insensitive Search</button>
+
+    <br>
+
+    <p>Brackets</p>
+    <button onclick="myFunction2()">Check [e]</button>
+    <button onclick="myFunction3()">Check [^e]</button>
+    <button onclick="myFunction4()">Check [1,2,3]</button>
+    <button onclick="myFunction5()">Check [^1,2,3]</button>
+
+    <br>
+
+    <p>Meta Characters</p>
+    <button onclick="myFunction6()">Check w(words)</button>
+    <button onclick="myFunction7()">Check W(non words)</button>
+    <button onclick="myFunction8()">Check d(digits)</button>
+    <button onclick="myFunction9()">Check D(non digits)</button>
+    <br>
+    <br>
+    <button onclick="myFunction10()">Check s(spaces)</button>
+    <button onclick="myFunction11()">Check S(non spaces)</button>
+
+    <br>
+
+    <p>Quantifiers</p>
+    <button onclick="myFunction12()">Check e+</button>
+    <button onclick="myFunction13()">Check e*</button>
+    <button onclick="myFunction14()">Check d{1}</button>
+    <button onclick="myFunction15()">Check w{6}</button>
+
+    <br>
+
+    <p>Object Properties</p>
+    <button onclick="myFunction16()">Check g</button>
+    <button onclick="myFunction17()">Check i</button>
+    <button onclick="myFunction18()">Check m</button>
+
+    <br>
+
+    <p>Object Methods</p>
+    <button onclick="myFunction19()">Check et using object method</button>
+    <button onclick="myFunction20()">Check et present or not</button>
+    <button onclick="myFunction21()">Check hello present or not</button>
+
+    <script>
+        function myFunction() {
+            var str = "method on regular expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding all 'on' in string";
+            var patt = /on/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction1() {
+            var str = "Method on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding 'regular' in string";
+            var patt = /regular/i;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction2() {
+            var str = "Method on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding  all 'e' in string";
+            var patt = /[e]/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction3() {
+            var str = "Method on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding characters except 'e' in string";
+            var patt = /[^e]/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction4() {
+            var str = "Method 1,2,3 on 5,6,7,8 Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding numbers '1,2,3' in string";
+            var patt = /[1,2,3]/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction5() {
+            var str = "Method 1,2,3 on 5,6,7,8 Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding numbers except '1,2,3' in string";
+            var patt = /[^1,2,3]/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction6() {
+            var str = "Method 1,2,3!!! on  Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding words in string";
+            var patt = /\w/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction7() {
+            var str = "Method 1&2&3!!! on  Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding non words in string";
+            var patt = /\W/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction8() {
+            var str = "Method 1&2&3!!! on  Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding digits in string";
+            var patt = /\d/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction9() {
+            var str = "Method 1&2&3!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding non digits in string";
+            var patt = /\D/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction10() {
+            var str = "Method 1&2&3!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding spaces in string";
+            var patt = /\s/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+
+        function myFunction11() {
+            var str = "Method 1&2&3!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding non spaces in string";
+            var patt = /\S/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction12() {
+            var str = "Method 1&2&3!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding atleast one e in string";
+            var patt = /e+/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction13() {
+            var str = "Method 1&2&3!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding all e(with pos) in string";
+            var patt = /e*/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction14() {
+            var str = "Method 123!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding all digits whose length is 1 in string";
+            var patt = /\d{1}/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction15() {
+            var str = "Method 123!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding words with length is 5 in string";
+            var patt = /\w{6}/g;
+            var result = str.match(patt);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction16() {
+            var str = "Method 123!!! on Regular Expressions."
+            var patt = /\w{6}/g;
+            document.getElementById("demo").innerHTML = "Given pattern : " + patt + " Checks for g and returns true or false";
+            var result = patt.global;
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction17() {
+            var str = "Method 123!!! on Regular Expressions."
+            var patt = /\w{6}/i;
+            document.getElementById("demo").innerHTML = "Given pattern : " + patt + " Checks for i and returns true or false";
+            var result = patt.ignoreCase;
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction18() {
+            var str = "Method 123!!! on Regular Expressions."
+            var patt = /\w{6}/i;
+            document.getElementById("demo").innerHTML = "Given pattern : " + patt + " Checks for m and returns true or false";
+            var result = patt.multiline;
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction19() {
+            var str = "Method 123!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding first occured word 'et' in string";
+            var patt = new RegExp("et");
+            var result = patt.exec(str);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction20() {
+            var str = "Method 123!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding character 'et' is present in string or not";
+            var patt = new RegExp("et");
+            var result = patt.test(str);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+
+        function myFunction21() {
+            var str = "Method 123!!! on Regular Expressions."
+            document.getElementById("demo").innerHTML = "Given string : " + str + " Finding word 'hello' is present in string or not";
+            var patt = new RegExp("Hello");
+            var result = patt.test(str);
+            document.getElementById("demo1").innerHTML = "Output : " + result;
+        }
+    </script>
+</body>
+
+</html>
