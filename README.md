@@ -109,6 +109,7 @@ function functionname(parameters)
 
 ***Classes*** : Class is a user defined data type it contains data and memeber functions. 
 
+**Syntax**
 
 ```javascript
 class Classname {
@@ -126,6 +127,7 @@ class Classname {
 
 ***Objects*** : These are used to represent real time entities. It is an instance of a class.
 
+**Syntax**
 
 ```javascript
 var obj = {
