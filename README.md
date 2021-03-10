@@ -2,7 +2,7 @@
 
 JavaScript concepts revised 
 
-#### Variables -
+## Variables -
 
 Variables can be declared in 3 ways. They are - 
 
@@ -19,7 +19,7 @@ Difference between var,let and const -
   * const variables can neither be updated nor re-declared
 
 
-#### Operators 
+## Operators 
 
 * Arithematic Operators 
 
@@ -64,7 +64,7 @@ Difference between var,let and const -
     
     
 
-#### Data Types -
+## Data Types -
 
 Data can be represented in many ways using data types.
 
@@ -91,11 +91,11 @@ Data can be represented in many ways using data types.
 
     * RegExp    
 
-#### JavaScript Statements
+## JavaScript Statements
 
 JavaScript Statements contain some basic syntax for conditioning, looping and type conversions.
 
-#### Functions
+## Functions
 
 Functions are used to decrease repetition of code and are to perform a task.
 
@@ -109,7 +109,7 @@ function functionname(parameters)
 }
 ```
 
-#### Objects Class and Inheritance
+## Objects Class and Inheritance
 
 ***Classes*** : Class is a user defined data type it contains data and memeber functions. 
 
@@ -145,12 +145,12 @@ var obj = {
 }
 ```
 
-#### Events
+## Events
 
 An event is used to do some work in javascript when you do changes in HTML.
 
 
-#### Date
+## Date
 
 It is a JavaScript object which works on various date properties and features.
 
@@ -158,15 +158,15 @@ It is a JavaScript object which works on various date properties and features.
 
 var date = new Date(year, month, day, hours, minutes, seconds) 
 
-#### Math
+## Math
 
 Math is a JavaScript object which is used to do mathematical operations.
 
-#### RegExp
+## RegExp
 
 RegExp are regular expression which are used to find or show a pattern in text.
 
-#### Error Handling
+## Error Handling
 
 Error Handling is used to handle with javascript errors such as - EvalError,RangeError,SyntaxError,etc.
 
