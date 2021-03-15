@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        #container {
+            border: 3px solid black;
+            margin: 5px;
+            width: 400px;
+            height: 400px;
+            position: relative;
+            background-color: royalblue;
+        }
+        
+        #animate {
+            width: 80px;
+            height: 80px;
+            position: absolute;
+            background-color: wheat;
+        }
+    </style>
+</head>
+
+<body>
+    <button onclick="moveDiagnol()">Move Diagnolly</button>
+    <button onclick="moveLeft()">Move Left</button>
+    <br>
+    <button on>Delay Animation</button>
+    <p>Click button to check animation</p>
+    <div id="container">
+        <div id="animate">
+
+        </div>
+    </div>
+
+    <script>
+        var id = null;
+
+        function moveDiagnol() {
+            var elem = document.getElementById("animate");
+            var pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+
+            function frame() {
+                if (pos == 320) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.left = pos + "px";
+                    elem.style.top = pos + "px"
+                }
+            }
+        }
+
+
+        function moveLeft() {
+            var elem = document.getElementById("animate");
+            var pos = 0;
+            clearInterval(id);
+            id = setInterval(frame, 5);
+
+            function frame() {
+                if (pos == 320) {
+                    clearInterval(id);
+                } else {
+                    pos++;
+                    elem.style.left = pos + "px";
+                }
+            }
+        }
+    </script>
+</body>
+
+</html>

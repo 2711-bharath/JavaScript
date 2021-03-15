@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+
+    <h3>DOM methods</h3>
+
+
+    <!-- write -->
+    <button onclick="myFunction()">Click Me</button>
+    <p>Click above above button to show write method</p>
+
+    <!-- getElementById -->
+    <p id="method1"></p>
+
+    <!-- getElementsByName -->
+    <label for="Username">Username</label>
+    <input type="text" name="username">
+    <button type="submit" onclick="myFunction1()">Click</button>
+    <p id="description"></p>
+
+    <!-- getElementsByClassName -->
+    <div>
+        <ol>
+            <li class="username">Bharath</li>
+            <li class="username">Ganesh</li>
+            <li class="username">Akash</li>
+        </ol>
+        <button onclick="myFunction2()">Click Me</button>
+        <p>On clicking the above button username changes from bharath to Bharath Reddy</p>
+    </div>
+
+    <!-- getElementsByTagName -->
+    <span>Before clicking</span>
+    <button onclick="myFunction3()">Click me</button>
+    <p id="valueInSpan">When you click above button text inside span changes</p>
+
+    <ol>
+        <li class="cars">Audi</li>
+        <li class="cars">BMW</li>
+        <li class="cars">Mercedes-Benz</li>
+    </ol>
+
+    <button onclick="myFunction4()">Select one</button>
+    <button onclick="myFunction5()">Select All</button>
+    <p>On clicking above button you can display first one (or) all text below in class cars</p>
+    <p id="carName"></p>
+
+    <script>
+        function myFunction() {
+            document.write("<p>Write Method is called</p>")
+        }
+
+        function myFunction1() {
+            let x = document.getElementsByName("username");
+            document.getElementById("description").innerHTML = "Tag name having name username is " + x[0].tagName;
+        }
+
+        function myFunction2() {
+            let x = document.getElementsByClassName("username");
+            x[0].innerHTML = "Bharath Reddy";
+        }
+
+        function myFunction3() {
+            let x = document.getElementsByTagName("SPAN");
+            x[0].innerHTML = "After clicking";
+        }
+
+        function myFunction4() {
+            let x = document.querySelector(".cars");
+            document.getElementById("carName").innerHTML = "Car Name : " + x.innerHTML;
+        }
+
+        function myFunction5() {
+            let x = document.querySelectorAll(".cars");
+            let cars = x[0].innerHTML;
+            for (let i = 1; i < x.length; i++) {
+                cars += " , " + x[i].innerHTML;
+            }
+            document.getElementById("carName").innerHTML = "Car Name : " + cars;
+        }
+        document.getElementById("method1").innerHTML = "get element by id";
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <p>Click below button to take input from prompt</p>
+    <button id="btn1">Take one input</button>
+    <button id="btn2">Take two input</button>
+
+    <p id="p1"></p>
+    <p id="p2"></p>
+
+    <button id="btn3">Hover or click me</button>
+    <p id="p3"></p>
+
+    <button id="btn4" onclick="removeEvent()">Remove Event Listener</button>
+    <script>
+        /* 
+                                                                                                                                                element.addEventListener(event, function, useCapture);
+                                                                                                                                                                                    
+                                                                                                                                                Here 
+                                                                                                                                                1st parameter is about event name(ex click,mouseout,mouseover etc).
+                                                                                                                                                2nd parameter is about function that to be called when event is occured.
+                                                                                                                                                3rd parameter is optional. It is a boolean value specifying to use event capturing.
+                                                                                                                                                */
+        document.getElementById("btn1").addEventListener("click", function() {
+            var text = prompt("Enter any text : ");
+            document.getElementById("p1").innerHTML = text;
+        })
+
+        document.getElementById("btn2").addEventListener("click", function() {
+            var text = prompt("Enter any text : ");
+            document.getElementById("p2").innerHTML = text;
+        })
+
+        document.getElementById("btn2").addEventListener("click", function() {
+            var text = prompt("Enter any text : ");
+            document.getElementById("p2").innerHTML += "<br>" + text;
+        })
+
+        document.getElementById("btn3").addEventListener("click", myfunc());
+
+        function myfunc() {
+            document.getElementById("p3").innerHTML += "<br>Button Clicked";
+        }
+
+
+        document.getElementById("btn3").addEventListener("mouseover", function() {
+            document.getElementById("p3").innerHTML += "<br>Mouser over";
+        })
+
+        document.getElementById("btn3").addEventListener("mouseout", function() {
+            document.getElementById("p3").innerHTML += "<br>Mouse out";
+        })
+
+
+        function removeEvent() {
+            document.getElementById("btn3").removeEventListener("click", myfunc);
+        }
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #container {
+            background-color: wheat;
+            color: black;
+            font-size: 30px;
+            padding: 20px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+
+<body>
+    <div id="container">
+        <p onclick="changeText(this)">Click me!!</p>
+    </div>
+
+    <br>
+
+    <button id="btn">Show me current date and time</button>
+    <p id="p2"></p>
+
+    <script>
+        document.getElementById("btn").onclick = showDate;
+
+        function showDate() {
+            document.getElementById("p2").innerHTML = Date()
+        }
+
+        function changeText(id) {
+
+            if (id.innerHTML == "Click me!!") {
+                id.innerHTML = "Welcome to Events";
+            } else if (id.innerHTML == "Welcome to Events") {
+                id.innerHTML = "My name is Bharath";
+            } else if (id.innerHTML = "My name is Bharath") {
+                id.innerHTML = "Thank You";
+            } else {
+                id.innerHTML = "";
+            }
+        }
+    </script>
+</body>
+
+</html>
