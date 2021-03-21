@@ -169,6 +169,7 @@ RegExp are regular expression which are used to find or show a pattern in text.
 **Syntax** -
 
 var pattern = new RegExp(pattern,attributes);
+
 var pattern = /pattern/attributes
 
 pattern is string that specifies pattern of regular expression
