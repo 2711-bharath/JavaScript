@@ -166,6 +166,73 @@ Math is a JavaScript object which is used to do mathematical operations.
 
 RegExp are regular expression which are used to find or show a pattern in text.
 
+**Syntax** -
+
+var pattern = new RegExp(pattern,attributes);
+var pattern = /pattern/attributes
+
+pattern is string that specifies pattern of regular expression
+
+* **Modifiers** -
+
+    We have 3 types of modifiers -
+    g : it performs a global match
+    i : it performs case-insensitive matching
+    m : It performs multiline matching
+
+
+* **Brackets** - 
+
+    [abc] : Finds any character between the brackets.
+    [^abc] : Finds any character NOT between the brackets.
+    [0-9] : Finds any digits between the brackets.
+    [^0-9] : Finds any non-digit NOT between the brackets.
+
+
+* **METACHARACTERs** - 
+    
+    w - It looks for a word character
+    W - It finds a non-word character
+    d - It finds a digit
+    D - It finds a non digit character
+    s - It finds a whitespace character
+    S - It finds a non-whitespace character
+    b - It finds a match at the beginning/end of a word
+    B - It looks for a match, but not a the beggining/end of a word
+    f - It finds a form feed character
+    r - It finds a carriage return character
+    v - It finds a vertical tab character
+    t - It finds a tab character
+
+
+* **Quantifiers** - 
+    
+    here below it can be any character in place of a
+
+    a+ : it matches any string that contain atleast one a
+    a* : it matches any string that contains zero or more occurrence of a
+    a? : it matches any string that contains zero or one occurrence of a
+    a{N} : it matches any string that contains a sequence of N a's
+    a{N,M} : it matches any string that contains a sequence of  N to M a's
+    a{N,} : it matches any string that contains a sequence of atleast N a's
+    a$ : it matches any string a at the end of it
+
+* **Object Properties** - 
+
+    constructor : Returns the function that creates the RegExp object's prototype
+    global : Checks whether the "g" modifier is set
+    ignoreCase : Checks whether the "i" modifier is set
+    lastIndex : Specifies the index at which to start the next match
+    multiline : Checks whether the "m" modifier is set
+
+* **Object Methods** - 
+
+    Complie() : It compiles a regular expression
+    exec() : It tests for a match in a string and returns the first match
+    test() : It tests for a match in a string and return true or false
+    toString() : it returns the string value of the regular expression
+
+
 ## Error Handling
 
 Error Handling is used to handle with javascript errors such as - EvalError,RangeError,SyntaxError,etc.
