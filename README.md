@@ -240,3 +240,7 @@ Error Handling is used to handle with javascript errors such as - EvalError,Rang
 
 It is used to maintain flow of the application.
 
+# Document Object Model (DOM)
+
+
+
