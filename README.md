@@ -1,4 +1,4 @@
-# JavaScript
+# JavaScript and TypeScript
 
 JavaScript concepts revised 
 
