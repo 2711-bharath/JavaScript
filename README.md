@@ -169,6 +169,7 @@ RegExp are regular expression which are used to find or show a pattern in text.
 **Syntax** -
 
 var pattern = new RegExp(pattern,attributes);
+
 var pattern = /pattern/attributes
 
 pattern is string that specifies pattern of regular expression
@@ -238,4 +239,8 @@ pattern is string that specifies pattern of regular expression
 Error Handling is used to handle with javascript errors such as - EvalError,RangeError,SyntaxError,etc.
 
 It is used to maintain flow of the application.
+
+# Document Object Model (DOM)
+
+
 
