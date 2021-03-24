@@ -1,4 +1,4 @@
-# JavaScript and TypeScript
+# JavaScript 
 
 JavaScript concepts revised 
 
@@ -242,5 +242,116 @@ It is used to maintain flow of the application.
 
 # Document Object Model (DOM)
 
+* DOM is a programming interface for HTML and XML documents. 
+* It represents HTML document in a tree representation. 
+* It is used to dynamically change the document structure,style and content in it. 
+
+## Methods
+
+We can access and change the contents of document using following methods
+
+* **write(string)** : It is used to write the given string on the document
+* **getElementById()** : It is used to return the element in the document having same id as given id
+* **getElementByName()** : It is used to return all elements having given name  
+* **getElementByClassName()** : It is used to return all elements having given class name
+* **getElementByTagName()** :  It is used to return all elements having the given tag name
+
+## CSS
+
+We can access and change style properties of an element using method.style.property
+
+**Example Syntax** -
+
+```javascript
+document.getElementById("heading").style.color = "white"; // changing color of element with id=heading
+document.getElementById("heading").style.backgroundColor = "black"; // changing background color of element with id=heading
+document.getElementById("p1").style.border = "2px solid black"; // adding border to element whose id=p1
+```
+
+## Animations
+
+We can animate using dom CSS and methods 
+
+**Example Syntax** -
+
+Function making the div element whose id=div1 in diagnol way
+
+```javascript
+function moveDiagnol() {
+    var elem = document.getElementById("div1");
+    var pos = 0;
+    clearInterval(id);
+    id = setInterval(frame, 5);
+
+    function frame() {
+        if (pos == 320) {
+            clearInterval(id);
+        } else {
+            pos++;
+            elem.style.left = pos + "px";
+            elem.style.top = pos + "px"
+        }
+    }
+}
+```
+
+## Events
+
+DOM Events allow javascript to add different events on elements in HTML document.
+
+**Syntax** -
+document.getElementById(id).event = function;
+
+Some of the example events are - 
+* onclick
+* onmouseenter
+* onmouseleave
+* onload
+
+## Event Listener
+We can add events to HTML elements in a document from JavaScript using event listener.
+**Syntax**
+To add an event 
+
+document.getElementById(id).addEventListener(eventType, function)
+
+To remove an event 
+
+document.getElementById(id).addEventListener(eventType, function)
+
+## Nodes
+
+The DOM is a tree structure that represents the HTML website, and every element in HTML document is a **node**.
+
+We have different types of nodes.
+These are some nodes that are oftenly used - 
+
+* ELEMENT_NODE  
+    * Ex : h1,p,span,etc..
+* ATTRIBUTE_NODE E
+    * Ex: class,id,src,etc..
+* TEXT_NODE 
+    * Ex: every html element having text inside it contains text node
+
+## Collections
+
+An HTMLCollection object is an array-like list or collection of HTML elements.
+
+**Example** - 
+
+In the below code it collects all the p tag elements in document.
+
+These elements can be accessed using index.
+
+Here all p elements color is changed to red and font size is changed to 20px.
+
+```javascript
+var myCollection = document.getElementsByTagName("p");
+var i;
+for (i = 0; i < myCollection.length; i++) {
+    myCollection[i].style.color = "red";
+    myCollection[i].style.fontSize = "20px";
+}
+```
 
 
