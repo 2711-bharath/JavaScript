@@ -317,7 +317,7 @@ document.getElementById(id).addEventListener(eventType, function)
 
 To remove an event 
 
-document.getElementById(id).addEventListener(eventType, function)
+document.getElementById(id).removeEventListener(eventType, function)
 
 ## Nodes
 
