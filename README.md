@@ -327,9 +327,9 @@ We have different types of nodes.
 These are some nodes that are oftenly used - 
 
 * ELEMENT_NODE  
-    * Ex : h1,p,span,etc..
+    * Ex : h1, p, span, etc..
 * ATTRIBUTE_NODE E
-    * Ex: class,id,src,etc..
+    * Ex: class, id, src, etc..
 * TEXT_NODE 
     * Ex: every html element having text inside it contains text node
 
