@@ -324,6 +324,10 @@ document.getElementById(id).removeEventListener(eventType, function)
     var text = prompt("Enter any text : ");
     document.getElementById("p2").innerHTML += "<br>" + text;
 })
+
+function removeEvent() {
+    document.getElementById("btn3").removeEventListener("click", myfunc);
+}
 ```
 ## Nodes
 
