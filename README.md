@@ -319,6 +319,12 @@ To remove an event
 
 document.getElementById(id).removeEventListener(eventType, function)
 
+```javascript
+ document.getElementById("btn2").addEventListener("click", function() {
+    var text = prompt("Enter any text : ");
+    document.getElementById("p2").innerHTML += "<br>" + text;
+})
+```
 ## Nodes
 
 The DOM is a tree structure that represents the HTML website, and every element in HTML document is a **node**.
@@ -353,5 +359,3 @@ for (i = 0; i < myCollection.length; i++) {
     myCollection[i].style.fontSize = "20px";
 }
 ```
-
-
